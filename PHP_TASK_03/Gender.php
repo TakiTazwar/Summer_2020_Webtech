@@ -1,5 +1,5 @@
 <?php
-print_r($_GET);
+//print_r($_GET);
 if(isset($_GET['gender']))
 {
 	$gender=$_GET['gender'];
@@ -7,7 +7,7 @@ if(isset($_GET['gender']))
 }
 else
 {
-	print_r($_GET);
+	//print_r($_GET);
 	//echo $_GET['submit'];
 	if(isset($_GET['submit']))
 	{
@@ -21,12 +21,13 @@ else
 </head>
 <body>
 	<form>
-		Gender <br>
-		<input type="radio" name="gender" value="Male" >  Male 
-		<input type="radio" name="gender" value="Female" > Female
-		<input type="radio" name="gender" value="Other" > Other <br>
-		<input type="submit" name="submit" value="Submit">
-	
+		<fieldset>
+		<legend> GENDER </legend><br>
+			<input type="radio" name="gender" value="Male" >  Male 
+			<input type="radio" name="gender" value="Female" > Female
+			<input type="radio" name="gender" value="Other" > Other <br>
+			<input type="submit" name="submit" value="Submit">
+		</fieldset>
 	</form>
 
 </body>
