@@ -17,9 +17,18 @@ if(isset($_COOKIE['status']))
 				<td>:</td>
 				<td><?php echo $name ?></td>
 				<td rowspan="7" align="center">
-					<img width="128" src="../image/user.png"/>
+					<img width="128" src=<?php if(isset($_COOKIE['picture']))
+					{
+						echo '"'.$_COOKIE['picture'].'"';
+					}
+					else
+					{
+						echo '"'."user.png".'"';
+					} 
+					?>
+					/>
                     <br/>
-                    <a href="../write/picture.html">Change</a>
+                    <a href="picture.php">Change</a>
 				</td>
 			</tr>		
 			<tr><td colspan="3"><hr/></td></tr>
@@ -42,10 +51,15 @@ if(isset($_COOKIE['status']))
 			</tr>
 		</table>	
         <hr/>
-        <a href="../write/edit_profile.html">Edit Profile</a>
-        <a href="logout.php"><u>Logout</a>	
 	</form>
 </fieldset>
+
+     <br>
+	<a href="profileHome.php">Profile Home</a>|
+	<a href="picture.php">Edit Picture</a>|
+	<a href="profile.php">View Profile</a>|
+	<a href="edit_profile.php">Edit Profile</a>|
+    <a href="logout.php"><u>Logout</a>
 
 <?php
 }
