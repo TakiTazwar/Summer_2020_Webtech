@@ -69,6 +69,6 @@ if(isset($_GET['Name']))
 		Name<br>
 		<input type="text" name="Name"><br>
 		<input type="submit" name="Submit">
-
+	</form>
 </body>
 </html>
