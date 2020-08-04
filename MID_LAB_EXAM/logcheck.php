@@ -14,7 +14,7 @@
 			
 			$file = fopen('user.txt', 'r');
 			$data = fread($file, filesize('user.txt'));
-			$user = explode('|', $data);
+			//$user = explode('|', $data);
 			$users = explode('/r/n', $data);
 			//print_r($users);
 			$counter=0;
@@ -39,6 +39,8 @@
 			//print_r($user);
 			if(trim($user[0]) == $uname && trim($user[3]) == $password){
 				$_SESSION['status']  = "Ok";
+				$_SESSION['uname'] 	= $user[0];
+				$_SESSION['type'] 	= $user[4];
 				header('location: home.php');
 				}
 				else
