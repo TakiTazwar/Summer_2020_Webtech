@@ -15,7 +15,7 @@ if ($_SESSION['status']=="Ok")
 <br>
 <a href="cart.html"><u>Go to Cart</u></a>|
 <a href="orderHistory.html"><u>Order History</u></a>|
-<a href="profile.html"><u>Profile</u></a><br>
+<a href="profile.php"><u>Profile</u></a><br>
 <img src="loginshow.png" width="500" height="500">
 
 <form action="logout.php" method="post">

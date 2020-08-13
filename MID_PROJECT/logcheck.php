@@ -32,12 +32,12 @@
 				}
 				header('location: loginHome.php');
 			}else{
-				echo "Null submission".'<a href="login.html"><u>Home</a>';
+				echo "Null submission".'<a href="login.php"><u>Home</a>';
 			}
 		}
 
 	}else{
-		echo "Null submission".'<a href="login.html"><u>Home</a>';
+		echo "Null submission".'<a href="login.php"><u>Home</a>';
 	}
 
 ?>

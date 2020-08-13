@@ -80,13 +80,13 @@ if(isset($_REQUEST['name']))
 				}
 				else
 				{
-					echo "Empty Values Cannot be entered".'<a href="registration.html"><u>Home</a>';
+					echo "Empty Values Cannot be entered <br>".'<a href="registration.html"><u>Return</a>';
 				}
 			}
 	}
 	else
 	{
-		echo "Name Must be in A-Z or a-z";
+		echo "Name Must be in A-Z or a-z  <br>".'<a href="registration.html"><u>Return</a>';
 	}
 }
 else
