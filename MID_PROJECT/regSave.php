@@ -69,7 +69,7 @@ if(isset($_REQUEST['name']))
 						# code...
 						$sql1="INSERT INTO registration (name, email, username, password, gender, dateofbirth, usertype) VALUES ('".$_POST['name']."', '".$_POST['email']."', '".$_POST['username']."', '".$_POST['password']."', '".$_POST['gender']."', '".$_POST['date']."', '".$_POST['usertype']."')";
 						mysqli_query($conn,$sql1);
-						header("location: login.html");
+						header("location: login.php");
 					}
 					else
 					{

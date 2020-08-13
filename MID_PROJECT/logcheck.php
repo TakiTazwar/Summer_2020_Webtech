@@ -19,6 +19,17 @@
 			if(!empty($user)){
 				$_SESSION['status']  = "Ok";
 				$_SESSION['username']=$username;
+				if(isset($_POST['remember']))
+				{
+					setcookie('user',$username,time()+3600,'/');
+					setcookie('password',$password,time()+3600,'/');
+					echo $_COOKIE['user'];
+				}
+				else
+				{
+					setcookie('user',$username,time()-3600,'/');
+					setcookie('password',$password,time()-3600,'/');
+				}
 				header('location: loginHome.php');
 			}else{
 				echo "Null submission".'<a href="login.html"><u>Home</a>';
