@@ -1,4 +1,5 @@
 <?php
+require_once('../db/dataAccess.php');
 if(isset($_REQUEST['name']))
 {
 	$Name=$_REQUEST['name'];
@@ -57,7 +58,7 @@ if(isset($_REQUEST['name']))
 			{
 				echo "worked";
 				# code...
-				$conn = mysqli_connect('127.0.0.1', 'root', '', 'foodDeliverManagementSystem');
+				$conn = dbConnection();
 				$sql= 'select * from registration where username="'.$_POST['username'].'"';
 				$result = mysqli_query($conn,$sql);
 				$data = mysqli_fetch_assoc($result);

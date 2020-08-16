@@ -1,4 +1,5 @@
 <?php
+	require_once('../db/dataAccess.php');
 	session_start();
 
 	if(isset($_POST['LogIn'])){
@@ -11,7 +12,7 @@
 
 		}else{
 			
-			$conn = mysqli_connect('127.0.0.1', 'root', '', 'fooddelivermanagementsystem');
+			$conn = dbConnection();
 			$sql = "select * from 	registration where username='".$username."' and password='".$password."'";
 			$result = mysqli_query($conn, $sql);
 			$user 	= mysqli_fetch_assoc($result);
