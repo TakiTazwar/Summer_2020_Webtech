@@ -104,7 +104,7 @@
 			echo "DB connection error";
 		}
 
-		$sql = "select * from users";
+		$sql = "select * from company";
 		$result = mysqli_query($conn, $sql);
 		$users = [];
 
@@ -113,5 +113,37 @@
 		}
 
 		return $users;
+	}
+
+	function insertCompany($user){
+		$conn = dbConnection();
+
+		if(!$conn){
+			echo "DB connection error";
+		}
+
+		$sql = "insert into company values('{$user['id']}', '{$user['company_name']}','{$user['profile_description']}', '{$user['industry']}', '{$user['company_website']}', '{$user['company_logo']}', '{$user['user_account_id']}')";
+		if(mysqli_query($conn, $sql)){
+			return true;
+		}else{
+			return false;
+		}
+	}
+	function getId($username){
+		$conn = dbConnection();
+
+		if(!$conn){
+			echo "DB connection error";
+		}
+
+		$sql = "select id from users where username='{$username}'";
+		$result = mysqli_query($conn, $sql);
+		$user = mysqli_fetch_assoc($result);
+
+		if(count($user) > 0 ){
+			return $user['id'];
+		}else{
+			return "null";
+		}
 	}
 ?>
