@@ -31,12 +31,12 @@
 			<td><?=$users[$i]['company_name']?></td>
 			<td><?=$users[$i]['profile_description']?></td>
 			<td><?=$users[$i]['industry']?></td>
-			<td><?=$users[$i]['company_website']?></td>
+			<td><a href=<?='"'.$users[$i]['company_website'].'"'?>><?=$users[$i]['company_website']?></a></td>
 			<td><img src=<?='"'.$users[$i]['company_logo'].'"'?>height="200px" width="200px"></td>
 			<td><?=$users[$i]['user_account_id']?></td>
 			<td>
-				<a href="edit.php?id=<?=$users[$i]['id']?>">Edit</a> |
-				<a href="delete.php?id=<?=$users[$i]['id']?>">Delete</a> 
+				<a href="editCompany.php?id=<?=$users[$i]['id']?>">Edit</a> |
+				<a href="deleteCompany.php?id=<?=$users[$i]['id']?>">Delete</a> 
 			</td>
 		</tr>
 

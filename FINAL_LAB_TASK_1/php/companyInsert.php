@@ -39,23 +39,6 @@
 			}
 
 		}
-
-		/*else{
-
-			$user = [
-				'username'=> $username,
-				'password'=> $password,
-				'email'=> $email
-			];
-
-			$status = insert($user);
-
-			if($status){
-				header('location: ../views/login.php?success=registration_done');
-			}else{
-				header('location: ../views/register.php?error=db_error');
-			}
-		}*/
 	}
 
 ?>

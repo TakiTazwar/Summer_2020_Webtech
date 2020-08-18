@@ -13,6 +13,18 @@
 		$row = mysqli_fetch_assoc($result);
 		return $row;
 	}
+	function getByIDCompany($id){
+		$conn = dbConnection();
+
+		if(!$conn){
+			echo "DB connection error";
+		}
+
+		$sql = "select * from company where id={$id}";
+		$result = mysqli_query($conn, $sql);
+		$row = mysqli_fetch_assoc($result);
+		return $row;
+	}
 
 	function getAllUser(){
 		$conn = dbConnection();
@@ -126,6 +138,24 @@
 		if(mysqli_query($conn, $sql)){
 			return true;
 		}else{
+			return false;
+		}
+	}
+
+	function updateCompany($user){
+		$conn = dbConnection();
+		if(!$conn){
+			echo "DB connection error";
+		}
+
+		$sql = "update company set company_name='{$user['company_name']}', profile_description='{$user['profile_description']}', industry='{$user['industry']}', company_website='{$user['company_website']}', company_logo='{$user['company_logo']}' where id={$user['id']}";
+		echo "<br>".$sql."<br>";
+
+		if(mysqli_query($conn, $sql)){
+			echo "true";
+			return true;
+		}else{
+			echo "false";
 			return false;
 		}
 	}
