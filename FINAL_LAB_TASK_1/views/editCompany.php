@@ -5,7 +5,7 @@
 	if (isset($_GET['id'])) {
 		$company = getByIDCompany($_GET['id']);	
 	}else{
-		//header('location: all_users.php');
+		header('location: companyInfo.php');
 	}
 
 ?>

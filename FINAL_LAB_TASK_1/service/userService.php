@@ -159,6 +159,20 @@
 			return false;
 		}
 	}
+	function deleteCompany($user){
+		$conn = dbConnection();
+		if(!$conn){
+			echo "DB connection error";
+		}
+
+		$sql = "DELETE FROM company WHERE id={$user['id']}";
+
+		if(mysqli_query($conn, $sql)){
+			return true;
+		}else{
+			return false;
+		}
+	}
 	function getId($username){
 		$conn = dbConnection();
 
