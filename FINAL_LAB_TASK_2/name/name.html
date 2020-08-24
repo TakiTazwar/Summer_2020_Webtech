@@ -5,15 +5,16 @@
 	<script type="text/javascript" src="script.js"></script>
 </head>
 <body>
-	<form method="post" action="nameCheck.php" onsubmit="return validate()">
+	<form method="post" action="nameCheck.php" onsubmit="return val()">
 		<table>
 			<tr>
 				<td>Name</td>
-				<td><input type="text" name=""></td>
+				<td><input type="text" id="name" name="name" onkeyup="remover()"></td>
+				<td id="msg"></td>
 			</tr>
 			<tr>
 				<td></td>
-				<td><input type="submit" name=""></td>
+				<td><input type="submit" name="submit"></td>
 			</tr>
 		</table>
 
