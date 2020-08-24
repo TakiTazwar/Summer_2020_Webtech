@@ -29,7 +29,7 @@ function remover1()
 		document.getElementById('msg').innerHTML="";
 	}
 }
-function remover1()
+function remover2()
 {
 	var month =document.getElementById('month').value;
 	if(month!="")
@@ -37,7 +37,7 @@ function remover1()
 		document.getElementById('msg').innerHTML="";
 	}
 }
-function remover1()
+function remover3()
 {
 	var year =document.getElementById('year').value;
 	if(year!="")
