@@ -4,14 +4,14 @@
 	<script type="text/javascript" src="script.js"></script>
 </head>
 <body>
-	<form method="post" action="genderCheck.php" onsubmit="return val()">
+	<form name="myform" method="post" action="genderCheck.php" onsubmit="return val()">
 		<fieldset>
 		<legend> GENDER </legend><br>
 		<table>
 			<tr><td>
-			<input type="radio" id="email" name="gender" value="Male" >  Male 
-			<input type="radio" id="email" name="gender" value="Female" > Female
-			<input type="radio" id="email" name="gender" value="Other" > Other <br>
+			<input type="radio"  name="gender" value="Male" >  Male 
+			<input type="radio"  name="gender" value="Female" > Female
+			<input type="radio"  name="gender" value="Other" > Other <br>
 			</td>
 			<td id="msg"></td>
 			</tr>
