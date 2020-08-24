@@ -21,3 +21,11 @@ function val()
 		return false;
 	}
 }
+function remover()
+{
+	var id=document.getElementById('id').value;
+	if(id!="")
+	{
+		document.getElementById('msg').innerHTML="";
+	}
+}
