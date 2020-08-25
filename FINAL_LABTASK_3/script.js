@@ -141,3 +141,42 @@ function val()
 		return false;
 	}
 }
+
+function removername()
+{
+	var userName =document.getElementById('name').value;
+	if(userName!="")
+	{
+		document.getElementById('namemsg').innerHTML="";
+	}
+}
+function removeremail()
+{
+	var email =document.getElementById('email').value;
+	if(email!="")
+	{
+		document.getElementById('emailmsg').innerHTML="";
+	}
+}
+function removergender()
+{
+	document.getElementById('gendermsg').innerHTML="";
+}
+function removerdob()
+{
+	var day=document.getElementById('day').value;
+	var month=document.getElementById('month').value;
+	var year=document.getElementById('year').year;
+	if(day!="" && month!="" && year!="")
+	{
+		document.getElementById('dobmsg').innerHTML="";
+	}
+}
+function removerdegree()
+{
+	document.getElementById('degreemsg').innerHTML="";
+}
+function removerpicture()
+{
+	document.getElementById('picmsg').innerHTML="";
+}

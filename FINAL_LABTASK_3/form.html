@@ -14,7 +14,7 @@
 				<td  width="20%">Name
 				</td>
 				<td width="30px">
-					<input type="text" id="name" name="Name" size="30px" height="100" width="100">
+					<input type="text" id="name" name="Name" onkeyup="removername()" size="30px" height="100" width="100" >
 				</td>
 				<td width="5%" id="namemsg">
 				</td>
@@ -23,7 +23,7 @@
 				<td>Email
 				</td>
 				<td>
-					<input type="email" id="email" name="email" size="30px">
+					<input type="email" id="email" name="email" onkeyup="removeremail()" size="30px">
 				</td>
 				<td id="emailmsg">
 				</td>
@@ -32,9 +32,9 @@
 				<td>Gender
 				</td>
 				<td>
-					<input type="radio" name="gender" value="Male" >  Male 
-				<input type="radio" name="gender" value="Female" > Female
-				<input type="radio" name="gender" value="Other" > Other
+				<input type="radio" name="gender" value="Male" onclick="removergender()">  Male 
+				<input type="radio" name="gender" value="Female" onclick="removergender()"> Female
+				<input type="radio" name="gender" value="Other" onclick="removergender()"> Other
 				</td>
 				<td id="gendermsg">
 				</td>
@@ -43,9 +43,9 @@
 				<td>Date of Birth
 				</td>
 				<td>
-					<input type="text" id="day" name="date"size="5px">/
-					<input type="text" id="month" name="month"size="5px">/
-					<input type="text" id="year" name="year"size="5px">   <i>(dd/mm/yyyy)</i>
+					<input type="text" id="day" name="date" onkeyup="removerdob()"size="5px">/
+					<input type="text" id="month" name="month" onkeyup="removerdob()"size="5px">/
+					<input type="text" id="year" name="year" onkeyup="removerdob()"size="5px">   <i>(dd/mm/yyyy)</i>
 				</td>
 				<td id="dobmsg">
 				</td>
@@ -72,10 +72,10 @@
 				<td>Degree
 				</td>
 				<td>
-					<input type="checkbox" id="ssc" name="ssc"> SSC
-					<input type="checkbox" id="hsc" name="hsc"> HSC
-					<input type="checkbox" id="bsc"name="bsc"> BSc.
-					<input type="checkbox" id="msc" name="msc"> MSc.
+					<input type="checkbox" id="ssc" name="ssc" onclick="removerdegree()"> SSC
+					<input type="checkbox" id="hsc" name="hsc" onclick="removerdegree()"> HSC
+					<input type="checkbox" id="bsc"name="bsc" onclick="removerdegree()"> BSc.
+					<input type="checkbox" id="msc" name="msc" onclick="removerdegree()"> MSc.
 				</td>
 				<td id="degreemsg">
 				</td>
@@ -84,7 +84,7 @@
 				<td>Photo
 				</td>
 				<td colspan="2">
-					<input type="file" id="file" name="upload">
+					<input type="file" id="file" name="upload" onclick="removerpicture()">
 				</td>
 			</tr>
 			<tr>
