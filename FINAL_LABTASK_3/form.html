@@ -1,9 +1,10 @@
 <html>
 <head>
 	<title>Home</title>
+	<script type="text/javascript" src="script.js"></script>
 </head>
 <body>
-	<form>
+	<form name="myform" method="post" action="formCheck.php" onsubmit="return val()">
 		<table border="1" width="500px" height="300px">
 			<tr>
 				<td colspan="3" align="center" height="30%"><h1> PERSON PROFILE</h1>
@@ -13,18 +14,18 @@
 				<td  width="20%">Name
 				</td>
 				<td width="30px">
-					<input type="text" name="Name" size="30px" height="100" width="100"><?php echo $name?>
+					<input type="text" id="name" name="Name" size="30px" height="100" width="100">
 				</td>
-				<td width="5%">
+				<td width="5%" id="namemsg">
 				</td>
 			</tr>
 			<tr>
 				<td>Email
 				</td>
 				<td>
-					<input type="email" name="email" size="30px"><?php echo $email?>
+					<input type="email" id="email" name="email" size="30px">
 				</td>
-				<td>
+				<td id="emailmsg">
 				</td>
 			</tr>
 			<tr>
@@ -34,21 +35,19 @@
 					<input type="radio" name="gender" value="Male" >  Male 
 				<input type="radio" name="gender" value="Female" > Female
 				<input type="radio" name="gender" value="Other" > Other
-				<?php echo $genderNotification?>
 				</td>
-				<td>
+				<td id="gendermsg">
 				</td>
 			</tr>
 			<tr>
 				<td>Date of Birth
 				</td>
 				<td>
-					<input type="text" name="date"size="5px">/
-					<input type="text" name="month"size="5px">/
-					<input type="text" name="year"size="5px">   <i>(dd/mm/yyyy)</i>
-					<?php echo $dateNoti?>
+					<input type="text" id="day" name="date"size="5px">/
+					<input type="text" id="month" name="month"size="5px">/
+					<input type="text" id="year" name="year"size="5px">   <i>(dd/mm/yyyy)</i>
 				</td>
-				<td>
+				<td id="dobmsg">
 				</td>
 			</tr>
 			<tr>
@@ -65,7 +64,6 @@
 						<option value="O+">O+</option>
 						<option value="O-">O-</option>
 			</select>
-			<?php echo $bgNoti?>
 				</td>
 				<td>
 				</td>
@@ -74,11 +72,10 @@
 				<td>Degree
 				</td>
 				<td>
-					<input type="checkbox" name="a"> SSC
-					<input type="checkbox" name="b"> HSC
-					<input type="checkbox" name="c"> BSc.
-					<input type="checkbox" name="d"> MSc.
-					<?php echo $degreeNoti?>
+					<input type="checkbox" id="ssc" name="ssc"> SSC
+					<input type="checkbox" id="hsc" name="hsc"> HSC
+					<input type="checkbox" id="bsc"name="bsc"> BSc.
+					<input type="checkbox" id="msc" name="msc"> MSc.
 				</td>
 				<td>
 				</td>
@@ -87,8 +84,7 @@
 				<td>Photo
 				</td>
 				<td colspan="2">
-					<input type="file" name="upload">
-					<?php echo $profileNoti?>
+					<input type="file" id="file" name="upload">
 				</td>
 			</tr>
 			<tr>
