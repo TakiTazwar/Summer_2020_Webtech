@@ -25,6 +25,7 @@ function val()
 					}
 					counter=counter+1;
 				}
+				document.getElementById('namemsg').innerHTML="";
 				namevalid=true;
 			}
 			else
@@ -49,6 +50,7 @@ function val()
 			if(emailsplit[1].split(".").length>=2)
 			{
 				//alert(emailsplit[1].split(".").length);
+				document.getElementById('emailmsg').innerHTML="";
 				emailvalid=true;
 			}
 			else
@@ -90,6 +92,7 @@ function val()
 	{
 		if((parseInt(day,10)>0 && parseInt(day,10)<32) && (parseInt(month,10)>0 && parseInt(month,10)<13) && (parseInt(year,10)>1899 && parseInt(year,10)<2017))
 		{
+			document.getElementById('dobmsg').innerHTML="";
 			dobvalid=true;
 		}
 		else
@@ -104,7 +107,32 @@ function val()
 		dobvalid=false;
 	}
 
-	if(namevalid && emailvalid && gendervalid && dobvalid)
+	var degreeValid=false;
+	if(document.getElementById('ssc').checked || document.getElementById('hsc').checked || document.getElementById('bsc').checked)
+	{
+		document.getElementById('degreemsg').innerHTML="";
+		degreeValid=true;
+	}
+	else
+	{
+		document.getElementById('degreemsg').innerHTML="Please choose an option";
+		degreeValid=false;
+	}
+
+	var pictureValid=false;
+	var file=document.getElementById('file').value;
+	if(file!="")
+	{
+		document.getElementById('picmsg').innerHTML="";
+		pictureValid=true;
+	}
+	else
+	{
+		document.getElementById('picmsg').innerHTML="Select a picture";
+		pictureValid=false;
+	}
+
+	if(namevalid && emailvalid && gendervalid && dobvalid && degreeValid && pictureValid)
 	{
 		return true;
 	}
