@@ -7,8 +7,11 @@
 	//add user
 	if(isset($_POST['email'])){
 
-		echo "Yes";
-		
+		$status=checkEmail($_POST['email']);
+		if($status)
+		{
+			echo "Email already taken";
+		}		
 	}
 
 
