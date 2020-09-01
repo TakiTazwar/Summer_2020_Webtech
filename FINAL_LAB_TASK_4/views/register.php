@@ -22,11 +22,11 @@
 			<table>
 				<tr>
 					<td>Username</td>
-					<td><input type="text" name="username"></td>
+					<td><input type="text" id="name" name="username"></td>
 				</tr>
 				<tr>
 					<td>Password</td>
-					<td><input type="password" name="password"></td>
+					<td><input type="password" id="password" name="password"></td>
 				</tr>
 				<tr>
 					<td>Email</td>
@@ -44,7 +44,36 @@
 
 	<script type="text/javascript">
 		function f1() {
-			document.getElementsByTagName('a')[0].style.display='inline';
+			
+			var name=document.getElementById('email').value;
+			var email=document.getElementById('email').value;
+			var password=document.getElementById('email').value;
+
+			if(name!="" && email!="" && password!="" && document.getElementById('emailmsg').innerHTML=="")
+			{
+				var xhttp = new XMLHttpRequest();
+			xhttp.open('POST', '../php/regCheck.php', true);
+			xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+			xhttp.send('name='+name+'&passowrd='+password+'&email='+email+);
+
+			xhttp.onreadystatechange = function (){
+			if(this.readyState == 4 && this.status == 200){
+
+				if(this.responseText != ""){
+					document.getElementById('emailmsg').innerHTML = this.responseText;
+				}else{
+					document.getElementById('emailmsg').innerHTML = "";
+				}
+				
+			}	
+			}
+				
+
+
+
+
+				document.getElementsByTagName('a')[0].style.display='inline';
+			}
 		}
 
 		function f2()
