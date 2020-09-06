@@ -150,4 +150,17 @@
 			return $sql;
 		}
 	}
+
+	function getByIDBlog($id,$blogbody){
+		$conn = dbConnection();
+
+		if(!$conn){
+			echo "DB connection error";
+		}
+
+		$sql = "select * from blog where username='{$id}' and blogbody='{$blogbody}'";
+		$result = mysqli_query($conn, $sql);
+		$row = mysqli_fetch_assoc($result);
+		return $row;
+	}
 ?>

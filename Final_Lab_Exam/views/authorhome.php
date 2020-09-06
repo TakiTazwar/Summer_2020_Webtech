@@ -29,8 +29,8 @@
 			<td><?=$users[$i]['blogId']?></td>
 			<td><?=$users[$i]['blogbody']?></td>
 			<td>
-				<a href=<?='"edit.php?id='.$users[$i]['blogId']."&username=".$users[$i]['username'].'"'?>>Edit</a> |
-				<a href=<?="../php/delete.php?id=".$users[$i]['username']?>>Delete</a> 
+				<a href=<?='"editblog.php?id='.$users[$i]['blogbody']."&username=".$users[$i]['username'].'"'?>>Edit</a> |
+				<a href=<?="../php/deleteblog.php?id=".$users[$i]['username']?>>Delete</a> 
 			</td>
 		</tr>
 
