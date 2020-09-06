@@ -11,17 +11,17 @@
 </head>
 <body>
 
-	<a href="home.php">Back</a> |
+	<a href="adminhome.php">Back</a> |
 	<a href="../php/logout.php">Logout</a> 
 	
 	<h3>User list</h3>
 
 	<table border="1">
 		<tr>
-			<td>ID</td>
 			<td>Username</td>
+			<td>Name</td>
 			<td>Password</td>
-			<td>Email</td>
+			<td>Contact</td>
 			<td>Type</td>
 			<td>Action</td>
 		</tr>
@@ -36,8 +36,8 @@
 			<td><?=$users[$i]['contact']?></td>
 			<td><?=$users[$i]['type']?></td>
 			<td>
-				<a href="edit.php?id="<?=$users[$i]['username']?>>Edit</a> |
-				<a href="delete.php?id="<?=$users[$i]['username']?>>Delete</a> 
+				<a href=<?="edit.php?id=".$users[$i]['username']?>>Edit</a> |
+				<a href=<?="../php/delete.php?id=".$users[$i]['username']?>>Delete</a> 
 			</td>
 		</tr>
 
