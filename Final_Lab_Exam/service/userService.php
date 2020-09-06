@@ -8,7 +8,7 @@
 			echo "DB connection error";
 		}
 
-		$sql = "select * from users where id={$id}";
+		$sql = "select * from users where username={$id}";
 		$result = mysqli_query($conn, $sql);
 		$row = mysqli_fetch_assoc($result);
 		return $row;

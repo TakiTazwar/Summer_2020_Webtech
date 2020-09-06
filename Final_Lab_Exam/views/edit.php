@@ -30,13 +30,12 @@
 					<td><input type="password" name="password" value="<?=$user['password']?>"></td>
 				</tr>
 				<tr>
-					<td>Email</td>
-					<td><input type="text" name="email" value="<?=$user['email']?>"></td>
+					<td>Contact</td>
+					<td><input type="text" name="email" value="<?=$user['contact']?>"></td>
 				</tr>
 				<tr>
 					<td></td>
 					<td>
-						<input type="hidden" name="id" value="<?=$user['id']?>">
 						<input type="submit" name="edit" value="Update"> 
 						<a href="all_users.php">Back</a>
 					</td>

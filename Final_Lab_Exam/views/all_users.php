@@ -30,14 +30,14 @@
 			$users = getAllUser();
 			for ($i=0; $i != count($users); $i++) {  ?>
 		<tr>
-			<td><?=$users[$i]['id']?></td>
 			<td><?=$users[$i]['username']?></td>
+			<td><?=$users[$i]['name']?></td>
 			<td><?=$users[$i]['password']?></td>
-			<td><?=$users[$i]['email']?></td>
+			<td><?=$users[$i]['contact']?></td>
 			<td><?=$users[$i]['type']?></td>
 			<td>
-				<a href="edit.php?id=<?=$users[$i]['id']?>">Edit</a> |
-				<a href="delete.php?id=<?=$users[$i]['id']?>">Delete</a> 
+				<a href="edit.php?id="<?=$users[$i]['username']?>>Edit</a> |
+				<a href="delete.php?id="<?=$users[$i]['username']?>>Delete</a> 
 			</td>
 		</tr>
 
