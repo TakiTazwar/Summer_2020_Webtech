@@ -44,10 +44,10 @@
 		$result = mysqli_query($conn, $sql);
 		$user = mysqli_fetch_assoc($result);
 
-		if(count($user) > 0 ){
-			return true;
+		if(empty($user)){
+			return "none";
 		}else{
-			return false;
+			return $user['type'];
 		}
 	}
 
