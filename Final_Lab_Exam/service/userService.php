@@ -163,4 +163,19 @@
 		$row = mysqli_fetch_assoc($result);
 		return $row;
 	}
+
+	function updateBlog($user){
+		$conn = dbConnection();
+		if(!$conn){
+			echo "DB connection error";
+		}
+
+		$sql = "update blog set blogbody='{$user['email']}' where username='{$user['username']}'";
+
+		if(mysqli_query($conn, $sql)){
+			return true;
+		}else{
+			return false;
+		}
+	}
 ?>

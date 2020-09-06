@@ -47,20 +47,19 @@
 	<script type="text/javascript">
 		function f1() {
 			
-			var name=document.getElementById('name').value;
+			var name=document.getElementById('username').innerHTML;
 			var email=document.getElementById('contact').value;
 			var password=document.getElementById('password').value;
-			var username=document.getElementById('username').innerHTML;
 
 			
 			if(name!="" && email!="" && password!="" && document.getElementById('contactmsg').innerHTML=="")
 			{
 				//alert("works");
 				var xhttp = new XMLHttpRequest();
-			xhttp.open('POST', '../php/editCheck.php', true);
+			xhttp.open('POST', '../php/editblogCheck.php', true);
 			xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-			xhttp.send('name='+name+'&'+'password='+password+'&'+'email='+email+'&'+'username='+username);
-			alert('name='+name+'&'+'password='+password+'&'+'email='+email+'&'+'username='+username);
+			xhttp.send('name='+name+'&'+'password='+password+'&'+'email='+email);
+			//alert('name='+name+'&'+'password='+password+'&'+'email='+email+'&'+'username='+username);
 
 			xhttp.onreadystatechange = function (){
 			if(this.readyState == 4 && this.status == 200){
